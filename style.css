@@ -9,7 +9,7 @@ selector{
 /*Gradient */
 .fondoWeb {
 
-    background-image: linear-gradient(to bottom, white, beige);
+    background-image: linear-gradient(to bottom, white, rgb(226, 226, 218));
 }
 
 
@@ -66,6 +66,7 @@ selector{
 
 
 .enlacesdeNavegacion {
+    animation: animate__bounceOut;
     color: #000746;
     font-size: 130%;
     text-align: center;
@@ -88,7 +89,7 @@ selector{
 
 /*Gradient*/
 .seccionesDescriptivas {
-    background-image: linear-gradient(to right, rgb(248, 248, 241), rgb(248, 248, 207));
+    background-image: linear-gradient(to right, rgb(248, 248, 241), rgb(247, 247, 216));
     border-style: hidden;
     padding: 5px;
     margin: 5px;
@@ -98,13 +99,19 @@ selector{
 
 
 /*Transicion*/
+.H3 {
+    color: #050e61;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .H3:hover {
-    color: #1f2b96;
+    color: #0920f1;
     text-align: center;
     padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition-property: all;
-    transition-duration: 2s;
+    transition-duration: 5s;
 }
 
 .parrafo1 {
@@ -121,6 +128,7 @@ selector{
     line-height: 1.6;
     justify-content: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
 }
 
 .parrafo3 {
@@ -216,7 +224,23 @@ MEDIA QUERY
 }
 
 /*tablet*/
-@media only screen and (min-width:451px) and (max-width:960px) {}
+@media only screen and (min-width:451px) and (max-width:960px) {
+    
+    .descripcionPerfil {
+        flex-direction: column;
+    }
+
+    .enlacesdeNavegacion {
+        flex-direction: column;
+    }
+
+    .H2 {
+        animation: swing;
+        animation-duration: 5s;
+    }
+
+
+}
 
 /*desktop*/
 @media only screen and (min-width:961px) {}
