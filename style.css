@@ -1,0 +1,222 @@
+/*
+selector{
+    propiedad: valor;
+}
+
+*/
+
+
+/*Gradient */
+.fondoWeb {
+
+    background-image: linear-gradient(to bottom, white, beige);
+}
+
+
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    color: beige;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.H1 {
+    color: #051367;
+    font-style: italic;
+    font-size: 220%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*Animacion */
+
+.H2 {
+    color: #051367;
+    font-style: oblique;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation: pulse;
+    animation-duration: 5s;
+}
+
+.gallery-container {
+    
+    margin: 10px;
+    padding: 0;
+    display: grid;
+    /*declarar filas*/
+    grid-template-rows: auto auto;
+    /*declarar columnas*/
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    
+}
+
+
+.gallery-item{
+
+    align-items: center;
+    
+}
+
+
+
+.enlacesdeNavegacion {
+    color: #000746;
+    font-size: 130%;
+    text-align: center;
+    line-height: 6;
+    padding: 5;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.descripcionPerfil {
+    display: flex;
+    border: 10px;
+    flex-direction: row;
+}
+
+.bloque {
+    display: flex;
+}
+
+/*Gradient*/
+.seccionesDescriptivas {
+    background-image: linear-gradient(to right, rgb(248, 248, 241), rgb(248, 248, 207));
+    border-style: hidden;
+    padding: 5px;
+    margin: 5px;
+    border: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*Transicion*/
+.H3:hover {
+    color: #1f2b96;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.parrafo1 {
+    color: #1c1e97;
+    line-height: 1.6;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.parrafos2 {
+    padding: 10px;
+    color: #2c68f3;
+    line-height: 1.6;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.parrafo3 {
+    color: #000957;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.contacto {
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.descargaTesis {
+    text-align: center;
+    line-height: 6;
+}
+
+
+
+.listaTrabajosRealizados {
+    color: #051367;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    
+}
+
+.listaTrabajosenProceso {
+
+    color: #051367;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.listaContactos {
+    color: #051367;
+    text-align: center;
+    line-height: 8;
+}
+
+
+
+.contactoform {
+    color: #022c55;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center
+}
+
+
+.footer {
+    color: #022c55;
+    display: flex;
+    justify-content: center;
+    line-height: 6;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*
+MEDIA QUERY
+*/
+
+/*mobile*/
+@media only screen and (max-width:450px) {
+    .descripcionPerfil {
+        flex-direction: column;
+    }
+    .gallery-container {
+        /*declarar filas*/
+        grid-template-rows: auto auto auto auto auto auto;
+        /*declarar columnas*/
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+    .enlacesdeNavegacion {
+        flex-direction: column;
+    }
+}
+
+/*tablet*/
+@media only screen and (min-width:451px) and (max-width:960px) {}
+
+/*desktop*/
+@media only screen and (min-width:961px) {}
