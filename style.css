@@ -5,21 +5,20 @@ selector{
 
 */
 
-
 /*Gradient */
 .fondoWeb {
 
     background-image: linear-gradient(to bottom, white, rgb(226, 226, 218));
+    margin: auto;
+    display: contents;
 }
-
-
 
 .encabezado {
     display: flex;
     justify-content: center;
-    color: beige;
+    text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+
 }
 
 .H1 {
@@ -28,8 +27,9 @@ selector{
     font-size: 220%;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: auto;
+    margin-bottom: auto;
 }
-
 
 /*Animacion */
 
@@ -38,13 +38,14 @@ selector{
     font-style: oblique;
     font-size: 150%;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    animation: pulse;
-    animation-duration: 5s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    animation: zoomIn;
+    animation-duration: 3s;
 }
 
+
 .gallery-container {
-    
+
     margin: 10px;
     padding: 0;
     display: grid;
@@ -53,34 +54,32 @@ selector{
     /*declarar columnas*/
     grid-template-columns: auto auto auto;
     gap: 20px;
-    
 }
 
-
-.gallery-item{
-
+.gallery-item {
     align-items: center;
-    
 }
-
-
 
 .enlacesdeNavegacion {
-    animation: animate__bounceOut;
-    color: #000746;
-    font-size: 130%;
-    text-align: center;
-    line-height: 6;
-    padding: 5;
-    display: flex;
-    justify-content: space-evenly;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #000746;
+        font-size: 130%;
+        text-align: center;
+        line-height: 6;
+        padding: 5;
+        display: flex;
+        justify-content: space-evenly;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        align-content: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
 }
 
 .descripcionPerfil {
     display: flex;
     border: 10px;
     flex-direction: row;
+    text-align: unset;
 }
 
 .bloque {
@@ -98,13 +97,15 @@ selector{
 }
 
 
-/*Transicion*/
 .H3 {
     color: #050e61;
     text-align: center;
     padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+/*Transicion*/
+
 .H3:hover {
     color: #0920f1;
     text-align: center;
@@ -118,8 +119,9 @@ selector{
     color: #1c1e97;
     line-height: 1.6;
     padding: 10px;
+    margin-top: 70px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    text-align: justify;
 }
 
 .parrafos2 {
@@ -128,7 +130,7 @@ selector{
     line-height: 1.6;
     justify-content: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   
+
 }
 
 .parrafo3 {
@@ -137,16 +139,14 @@ selector{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-
 .contacto {
     padding: 10px;
     margin: 5px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    
-
+    align-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .descargaTesis {
@@ -154,44 +154,52 @@ selector{
     line-height: 6;
 }
 
-
-
 .listaTrabajosRealizados {
     color: #051367;
     display: flex;
     justify-content: space-around;
     padding: 5px;
-    
+
 }
 
 .listaTrabajosenProceso {
-
     color: #051367;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: stretch;
 }
 
-.listaContactos {
+.listaContactos{
     color: #051367;
     text-align: center;
     line-height: 8;
 }
 
+.listaContactosActuales {
+    color: #051367;
+    text-align: center;
+    line-height: 8;
+}
 
+.list-group-item {
+
+    color: #051367;
+    text-align: center;
+    line-height: 8;  
+
+}
 
 .contactoform {
-    color: #022c55;
+    color: #051367;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center
 }
-
 
 .footer {
     color: #022c55;
@@ -202,45 +210,3 @@ selector{
 }
 
 
-/*
-MEDIA QUERY
-*/
-
-/*mobile*/
-@media only screen and (max-width:450px) {
-    .descripcionPerfil {
-        flex-direction: column;
-    }
-    .gallery-container {
-        /*declarar filas*/
-        grid-template-rows: auto auto auto auto auto auto;
-        /*declarar columnas*/
-        grid-template-columns: auto;
-        gap: 20px;
-    }
-    .enlacesdeNavegacion {
-        flex-direction: column;
-    }
-}
-
-/*tablet*/
-@media only screen and (min-width:451px) and (max-width:960px) {
-    
-    .descripcionPerfil {
-        flex-direction: column;
-    }
-
-    .enlacesdeNavegacion {
-        flex-direction: column;
-    }
-
-    .H2 {
-        animation: swing;
-        animation-duration: 5s;
-    }
-
-
-}
-
-/*desktop*/
-@media only screen and (min-width:961px) {}
