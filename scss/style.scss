@@ -1,0 +1,37 @@
+/*
+Comando SASS
+sass --watch scss/style.scss css/style.css
+*/
+
+// ----- Variables ----- //
+
+$primary-color: #E8F9FD;
+$secondary-color: #79DAE8;
+$tertiary-color: #0AA1DD;
+$quaternary-color: #2155CD;
+
+// ----- Implementation ----- //
+
+*{
+    background-color: $primary-color !important;
+}
+
+h1 {
+    color: $secondary-color;
+}
+
+h2 {
+    color: $secondary-color;
+}
+
+h3 {
+    color: $secondary-color;
+}
+
+a {
+    color: $tertiary-color;
+}
+
+p {
+    color: $quaternary-color;
+}

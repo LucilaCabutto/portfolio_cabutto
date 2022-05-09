@@ -1,0 +1,29 @@
+/*
+Comando SASS
+sass --watch scss/style.scss css/style.css
+*/
+* {
+  background-color: #E8F9FD !important;
+}
+
+h1 {
+  color: #79DAE8;
+}
+
+h2 {
+  color: #79DAE8;
+}
+
+h3 {
+  color: #79DAE8;
+}
+
+a {
+  color: #0AA1DD;
+}
+
+p {
+  color: #2155CD;
+}
+
+/*# sourceMappingURL=style.css.map */
