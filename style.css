@@ -80,6 +80,10 @@ selector{
     border: 10px;
     flex-direction: row;
     text-align: unset;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .bloque {
