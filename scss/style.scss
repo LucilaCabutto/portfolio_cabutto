@@ -3,35 +3,83 @@ Comando SASS
 sass --watch scss/style.scss css/style.css
 */
 
-// ----- Variables ----- //
+/*nesting o anidamiento*/
 
-$primary-color: #E8F9FD;
-$secondary-color: #79DAE8;
-$tertiary-color: #0AA1DD;
-$quaternary-color: #2155CD;
+.fondoWeb {
+    background-color: #b2dabc;
+    margin: 10px;
+    padding: 20px;
 
-// ----- Implementation ----- //
+    .encabezado {
+        color: #5F7161;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-*{
-    background-color: $primary-color !important;
+    }
+
+    /*media query*/
+    @media screen and (max-width:450px) {
+        background-color: rgb(226, 226, 117);
+    }
+
+    .H2 {
+        color: #3c5e06;
+        text-align: center
+    }
+
+    .footer {
+        color: #5F7161;
+        text-align: center;
+        text-decoration: double;
+
+    }
 }
 
-h1 {
-    color: $secondary-color;
+.enlacesdeNavegacion {
+    color: #032b88;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: space-evenly;
+    text-align: center;
+
+
+    .d-flex {
+        color: #056185;
+        text-decoration: underline;
+
+        &:hover {
+            color: rgb(89, 15, 226);
+        }
+
+    }
+
 }
 
-h2 {
-    color: $secondary-color;
+
+.listaTrabajosRealizados {
+    color: #19241a;
+
+
+    h3 {
+        color: #3c5e06;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+
 }
 
-h3 {
-    color: $secondary-color;
-}
+.listaTrabajosRealizados {
 
-a {
-    color: $tertiary-color;
-}
+    ul {
+        list-style: georgian;
 
-p {
-    color: $quaternary-color;
+        li {
+            color: rgb(26, 87, 29);
+            justify-content: center;
+            text-align: center;
+        }
+    }
 }
