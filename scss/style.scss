@@ -6,17 +6,17 @@ sass --watch scss/style.scss css/style.css
 /*nesting o anidamiento*/
 
 .fondoWeb {
-    background-color: #b2dabc;
+
     margin: 10px;
     padding: 20px;
+    background-image: linear-gradient(to bottom, white, rgb(198, 226, 197));
 
     .encabezado {
         color: #5F7161;
         display: flex;
         justify-content: center;
         text-align: center;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     }
 
     /*media query*/
@@ -26,7 +26,9 @@ sass --watch scss/style.scss css/style.css
 
     .H2 {
         color: #3c5e06;
-        text-align: center
+        text-align: center;
+        animation: zoomIn;
+        animation-duration: 3s;
     }
 
     .footer {
@@ -39,7 +41,7 @@ sass --watch scss/style.scss css/style.css
 
 .enlacesdeNavegacion {
     color: #032b88;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     justify-content: space-evenly;
     text-align: center;
 
