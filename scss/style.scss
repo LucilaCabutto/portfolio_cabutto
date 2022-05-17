@@ -9,41 +9,164 @@ sass --watch scss/style.scss css/style.css
 
     margin: 10px;
     padding: 20px;
-    background-image: linear-gradient(to bottom, white, rgb(198, 226, 197));
+    background-image: linear-gradient(to bottom, white, rgb(226, 226, 218));
+    margin: auto;
+    display: contents;
 
     .encabezado {
-        color: #5F7161;
+        color: white;
         display: flex;
         justify-content: center;
         text-align: center;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-    }
 
-    /*media query*/
-    @media screen and (max-width:450px) {
-        background-color: rgb(226, 226, 117);
+
+        .H1 {
+            color: #051367;
+            font-style: italic;
+            font-size: 220%;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
     }
 
     .H2 {
-        color: #3c5e06;
+        color: #051367;
+        margin: 50px;
+        font-style: oblique;
+        font-size: 150%;
         text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         animation: zoomIn;
         animation-duration: 3s;
+
+
     }
 
-    .footer {
-        color: #5F7161;
+    .enlacesdeNavegacion {
+        color: #000746;
+        font-size: 130%;
         text-align: center;
-        text-decoration: double;
+        line-height: 6;
+        padding: 5;
+        display: flex;
+        justify-content: space-evenly;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        align-content: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .descripcionPerfil {
+        display: flex;
+        border: 10px;
+        flex-direction: row;
+        text-align: unset;
+        justify-content: space-around;
+        align-content: flex-start;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .parrafo1 {
+            color: #1c1e97;
+            line-height: 1.6;
+            padding: 10px;
+            margin-top: 70px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: justify;
+        }
+    }
+
+    .parrafos2 {
+        margin: 30px;
+        padding: 30px;
+        color: #2c68f3;
+        line-height: 1.6;
+        justify-content: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     }
-}
 
-.enlacesdeNavegacion {
-    color: #032b88;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    justify-content: space-evenly;
-    text-align: center;
+
+    .bloque {
+        display: flex;
+    }
+
+    .seccionesDescriptivas {
+        background-image: linear-gradient(to right, rgb(248, 248, 241), rgb(247, 247, 216));
+        border-style: hidden;
+        padding: 5px;
+        margin: 5px;
+        border: 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        .H3 {
+            color: #050e61;
+            text-align: center;
+            padding: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /*Transicion*/
+
+        .H3:hover {
+            color: #0920f1;
+            text-align: center;
+            padding: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            transition-property: all;
+            transition-duration: 5s;
+        }
+
+        .parrafos2 {
+            padding: 10px;
+            color: #2c68f3;
+            line-height: 1.6;
+            justify-content: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+    }
+
+    .contacto {
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .parrafo3 {
+            color: #000957;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    }
+
+
+    .gallery-container {
+
+        margin: 10px;
+        padding: 0;
+        display: grid;
+        /*declarar filas*/
+        grid-template-rows: auto auto;
+        /*declarar columnas*/
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+
+        .gallery-item {
+            align-items: center;
+        }
+
+    }
+
 
 
     .d-flex {
@@ -56,32 +179,141 @@ sass --watch scss/style.scss css/style.css
 
     }
 
-}
 
+    .listaTrabajosRealizados {
 
-.listaTrabajosRealizados {
-    color: #19241a;
+        h3 {
+            color: #050e61;
+            text-align: center;
+            padding: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+        }
 
-    h3 {
-        color: #3c5e06;
-        justify-content: center;
-        text-align: center;
+        ul {
+            list-style: georgian;
+
+            li {
+                color: #051367;
+                display: flex;
+                justify-content: space-around;
+                padding: 5px;
+                text-align: center;
+            }
+        }
 
     }
 
+    .listaTrabajosenProceso {
+        color: #051367;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-content: stretch;
+        align-items: stretch;
+    }
 
-}
+    .listaContactos {
+        color: #051367;
+        text-align: center;
+        line-height: 8;
+    }
 
-.listaTrabajosRealizados {
+    .listaContactosActuales {
+        color: #051367;
+        text-align: center;
+        line-height: 8;
 
-    ul {
-        list-style: georgian;
+        .list-group-item {
 
-        li {
-            color: rgb(26, 87, 29);
-            justify-content: center;
+            color: #051367;
             text-align: center;
+            line-height: 8;
+
         }
     }
+
+    .contactoform {
+        color: #051367;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center
+    }
+
+
+    .footer {
+        color: #5F7161;
+        text-align: center;
+        text-decoration: double;
+        margin: 50px;
+
+    }
+
+    /*media query*/
+    $small: 375px;
+    $medium: 768px;
+
+    // celular
+    @media screen and (max-width: $small) {
+
+
+        .enlacesdeNavegacion {
+
+            display: flex;
+            justify-content: space-evenly
+        }
+
+        .bloque {
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+        }
+
+        .gallery-container {
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto;
+        }
+
+    }
+
+    //tablet
+    @media screen and (max-width: $medium) {
+
+        .enlacesdeNavegacion {
+
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-content: stretch;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .bloque {
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+        }
+
+        .gallery-container {
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto;
+        }
+
+        .contacto {
+            display: flex;
+            justify-content: center;
+            align-content: flex-end;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+
+    }
+
+
 }
