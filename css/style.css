@@ -6,63 +6,238 @@ sass --watch scss/style.scss css/style.css
 .fondoWeb {
   margin: 10px;
   padding: 20px;
-  background-image: linear-gradient(to bottom, white, rgb(198, 226, 197));
+  background-image: linear-gradient(to bottom, white, rgb(226, 226, 218));
+  margin: auto;
+  display: contents;
   /*media query*/
 }
 .fondoWeb .encabezado {
-  color: #5F7161;
+  color: white;
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-@media screen and (max-width: 450px) {
-  .fondoWeb {
-    background-color: rgb(226, 226, 117);
-  }
+.fondoWeb .encabezado .H1 {
+  color: #051367;
+  font-style: italic;
+  font-size: 220%;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .fondoWeb .H2 {
-  color: #3c5e06;
+  color: #051367;
+  margin: 50px;
+  font-style: oblique;
+  font-size: 150%;
   text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   animation: zoomIn;
   animation-duration: 3s;
+}
+.fondoWeb .enlacesdeNavegacion {
+  color: #000746;
+  font-size: 130%;
+  text-align: center;
+  line-height: 6;
+  padding: 5;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  align-content: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.fondoWeb .descripcionPerfil {
+  display: flex;
+  border: 10px;
+  flex-direction: row;
+  text-align: unset;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.fondoWeb .descripcionPerfil .parrafo1 {
+  color: #1c1e97;
+  line-height: 1.6;
+  padding: 10px;
+  margin-top: 70px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: justify;
+}
+.fondoWeb .parrafos2 {
+  margin: 30px;
+  padding: 30px;
+  color: #2c68f3;
+  line-height: 1.6;
+  justify-content: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.fondoWeb .bloque {
+  display: flex;
+}
+.fondoWeb .seccionesDescriptivas {
+  background-image: linear-gradient(to right, rgb(248, 248, 241), rgb(247, 247, 216));
+  border-style: hidden;
+  padding: 5px;
+  margin: 5px;
+  border: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /*Transicion*/
+}
+.fondoWeb .seccionesDescriptivas .H3 {
+  color: #050e61;
+  text-align: center;
+  padding: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.fondoWeb .seccionesDescriptivas .H3:hover {
+  color: #0920f1;
+  text-align: center;
+  padding: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition-property: all;
+  transition-duration: 5s;
+}
+.fondoWeb .seccionesDescriptivas .parrafos2 {
+  padding: 10px;
+  color: #2c68f3;
+  line-height: 1.6;
+  justify-content: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.fondoWeb .contacto {
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.fondoWeb .contacto .parrafo3 {
+  color: #000957;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.fondoWeb .gallery-container {
+  margin: 10px;
+  padding: 0;
+  display: grid;
+  /*declarar filas*/
+  grid-template-rows: auto auto;
+  /*declarar columnas*/
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+.fondoWeb .gallery-container .gallery-item {
+  align-items: center;
+}
+.fondoWeb .d-flex {
+  color: #056185;
+  text-decoration: underline;
+}
+.fondoWeb .d-flex:hover {
+  color: rgb(89, 15, 226);
+}
+.fondoWeb .listaTrabajosRealizados h3 {
+  color: #050e61;
+  text-align: center;
+  padding: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.fondoWeb .listaTrabajosRealizados ul {
+  list-style: georgian;
+}
+.fondoWeb .listaTrabajosRealizados ul li {
+  color: #051367;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  text-align: center;
+}
+.fondoWeb .listaTrabajosenProceso {
+  color: #051367;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: stretch;
+  align-items: stretch;
+}
+.fondoWeb .listaContactos {
+  color: #051367;
+  text-align: center;
+  line-height: 8;
+}
+.fondoWeb .listaContactosActuales {
+  color: #051367;
+  text-align: center;
+  line-height: 8;
+}
+.fondoWeb .listaContactosActuales .list-group-item {
+  color: #051367;
+  text-align: center;
+  line-height: 8;
+}
+.fondoWeb .contactoform {
+  color: #051367;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .fondoWeb .footer {
   color: #5F7161;
   text-align: center;
   text-decoration: double;
+  margin: 50px;
 }
-
-.enlacesdeNavegacion {
-  color: #032b88;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  justify-content: space-evenly;
-  text-align: center;
+@media screen and (max-width: 375px) {
+  .fondoWeb .enlacesdeNavegacion {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .fondoWeb .bloque {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+  .fondoWeb .gallery-container {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+  }
 }
-.enlacesdeNavegacion .d-flex {
-  color: #056185;
-  text-decoration: underline;
-}
-.enlacesdeNavegacion .d-flex:hover {
-  color: rgb(89, 15, 226);
-}
-
-.listaTrabajosRealizados {
-  color: #19241a;
-}
-.listaTrabajosRealizados h3 {
-  color: #3c5e06;
-  justify-content: center;
-  text-align: center;
-}
-
-.listaTrabajosRealizados ul {
-  list-style: georgian;
-}
-.listaTrabajosRealizados ul li {
-  color: rgb(26, 87, 29);
-  justify-content: center;
-  text-align: center;
+@media screen and (max-width: 768px) {
+  .fondoWeb .enlacesdeNavegacion {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: stretch;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .fondoWeb .bloque {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+  .fondoWeb .gallery-container {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+  }
+  .fondoWeb .contacto {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
