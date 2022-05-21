@@ -3,42 +3,48 @@ Comando SASS
 sass --watch scss/style.scss css/style.css
 */
 
+
+
+@import '../scss/componentes/header.scss';
+
+@import '../scss/componentes/footer.scss';
+
+@import '../scss/base/variables';
+
+@import '../scss/base/estilosGenerales.scss';
+
+@import '../scss/base/listas';
+
+@import '../scss/base/mapas.scss';
+
+@import '../scss/base/extends.scss';
+
+@import '../scss/base/mixin.scss';
+
+
 /*nesting o anidamiento*/
 
 .fondoWeb {
 
     margin: 10px;
     padding: 20px;
-    background-image: linear-gradient(to bottom, white, rgb(226, 226, 218));
+    background-image: linear-gradient(to bottom, white, rgb(226, 226, 204));
     margin: auto;
     display: contents;
 
-    .encabezado {
-        color: white;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-
-
-        .H1 {
-            color: #051367;
-            font-style: italic;
-            font-size: 220%;
-            text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
+    .logo {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
     }
 
     .H2 {
-        color: #051367;
+        color: $azulmarino;
         margin: 50px;
         font-style: oblique;
         font-size: 150%;
-        text-align: center;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: $text-align-center;
+        font-family: $Lucida;
         animation: zoomIn;
         animation-duration: 3s;
 
@@ -46,36 +52,38 @@ sass --watch scss/style.scss css/style.css
     }
 
     .enlacesdeNavegacion {
-        color: #000746;
+        color: map-get($colores , principal);
         font-size: 130%;
-        text-align: center;
+        text-align: $text-align-center;
         line-height: 6;
         padding: 5;
-        display: flex;
-        justify-content: space-evenly;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        justify-content: $d-flex-justify-space;
+        font-family: $Lucida;
         align-content: stretch;
-        flex-direction: row;
-        flex-wrap: wrap;
         align-items: center;
+        @extend %flex;
     }
 
     .descripcionPerfil {
-        display: flex;
         border: 10px;
-        flex-direction: row;
         text-align: unset;
         justify-content: space-around;
         align-content: flex-start;
-        flex-wrap: nowrap;
         align-items: center;
+        @extend %flex;
+
+        .fotoPerfil {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
 
         .parrafo1 {
-            color: #1c1e97;
+            color:  map-get($colores , secundario);
             line-height: 1.6;
             padding: 10px;
             margin-top: 70px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: $Lucida;
             text-align: justify;
         }
     }
@@ -83,10 +91,10 @@ sass --watch scss/style.scss css/style.css
     .parrafos2 {
         margin: 30px;
         padding: 30px;
-        color: #2c68f3;
+        color:  map-get($colores , claro);
         line-height: 1.6;
         justify-content: center;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: $Lucida;
 
     }
 
@@ -101,23 +109,23 @@ sass --watch scss/style.scss css/style.css
         padding: 5px;
         margin: 5px;
         border: 10px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: $Lucida;
 
 
         .H3 {
-            color: #050e61;
-            text-align: center;
+            color:  map-get($colores , principal);
+            text-align: $text-align-center;
             padding: 5px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: $Lucida;
         }
 
         /*Transicion*/
 
         .H3:hover {
-            color: #0920f1;
-            text-align: center;
+            color:  map-get($colores , secundario);
+            text-align: $text-align-center;
             padding: 5px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: $Lucida;
             transition-property: all;
             transition-duration: 5s;
         }
@@ -127,7 +135,7 @@ sass --watch scss/style.scss css/style.css
             color: #2c68f3;
             line-height: 1.6;
             justify-content: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: $Lucida;
 
         }
 
@@ -136,16 +144,14 @@ sass --watch scss/style.scss css/style.css
     .contacto {
         padding: 10px;
         margin: 5px;
-        display: flex;
         justify-content: center;
         align-content: space-between;
-        flex-direction: row;
-        flex-wrap: wrap;
+        @extend %flex;
 
         .parrafo3 {
-            color: #000957;
+            color:  map-get($colores , principal);
             font-weight: bold;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: $Lucida;
         }
     }
 
@@ -155,11 +161,8 @@ sass --watch scss/style.scss css/style.css
         margin: 10px;
         padding: 0;
         display: grid;
-        /*declarar filas*/
-        grid-template-rows: auto auto;
-        /*declarar columnas*/
-        grid-template-columns: auto auto auto;
         gap: 20px;
+        @include grid(auto auto auto, space-around);
 
         .gallery-item {
             align-items: center;
@@ -169,32 +172,21 @@ sass --watch scss/style.scss css/style.css
 
 
 
-    .d-flex {
-        color: #056185;
-        text-decoration: underline;
-
-        &:hover {
-            color: rgb(89, 15, 226);
-        }
-
-    }
-
-
     .listaTrabajosRealizados {
 
         h3 {
-            color: #050e61;
-            text-align: center;
+            color:  map-get($colores , principal);
+            text-align: $text-align-center;
             padding: 5px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: $Lucida;
 
         }
 
         ul {
-            list-style: georgian;
+            list-style: circle;
 
             li {
-                color: #051367;
+                color: $azulmarino;
                 display: flex;
                 justify-content: space-around;
                 padding: 5px;
@@ -205,37 +197,39 @@ sass --watch scss/style.scss css/style.css
     }
 
     .listaTrabajosenProceso {
-        color: #051367;
+        color: $azulmarino;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: space-evenly;
+        justify-content: $d-flex-justify-space;
         align-content: stretch;
         align-items: stretch;
+        padding-left: 0;
     }
 
     .listaContactos {
-        color: #051367;
+        color: $azulmarino;
         text-align: center;
         line-height: 8;
+        padding-left: 0;
     }
 
     .listaContactosActuales {
-        color: #051367;
-        text-align: center;
+        color: $azulmarino;
+        text-align: $text-align-center;
         line-height: 8;
+        padding-left: 0;
 
         .list-group-item {
-
-            color: #051367;
-            text-align: center;
+            color: $azulmarino;
+            text-align: $text-align-center;
             line-height: 8;
 
         }
     }
 
     .contactoform {
-        color: #051367;
+        color: $azulmarino;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -243,27 +237,25 @@ sass --watch scss/style.scss css/style.css
         align-items: center
     }
 
-
-    .footer {
-        color: #5F7161;
-        text-align: center;
-        text-decoration: double;
-        margin: 50px;
-
-    }
-
-    /*media query*/
-    $small: 375px;
-    $medium: 768px;
-
     // celular
     @media screen and (max-width: $small) {
 
-
         .enlacesdeNavegacion {
-
             display: flex;
-            justify-content: space-evenly
+            justify-content: $d-flex-justify-space
+        }
+
+        .encabezado {
+            color: white;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .descripcionPerfil {
+            flex-direction: column;
         }
 
         .bloque {
@@ -273,8 +265,7 @@ sass --watch scss/style.scss css/style.css
         }
 
         .gallery-container {
-            grid-template-rows: auto auto auto;
-            grid-template-columns: auto auto;
+            @include grid(auto, center);
         }
 
     }
@@ -283,9 +274,8 @@ sass --watch scss/style.scss css/style.css
     @media screen and (max-width: $medium) {
 
         .enlacesdeNavegacion {
-
             display: flex;
-            justify-content: space-evenly;
+            justify-content: $d-flex-justify-space;
             flex-direction: column;
             align-content: stretch;
             flex-wrap: wrap;
@@ -298,9 +288,12 @@ sass --watch scss/style.scss css/style.css
             flex-direction: column;
         }
 
+        .descripcionPerfil {
+            flex-direction: column;
+        }
+
         .gallery-container {
-            grid-template-rows: auto auto auto;
-            grid-template-columns: auto auto;
+            @include grid(auto, center);
         }
 
         .contacto {
@@ -311,9 +304,7 @@ sass --watch scss/style.scss css/style.css
             flex-wrap: wrap;
             align-items: stretch;
         }
-
-
     }
 
-
 }
+
