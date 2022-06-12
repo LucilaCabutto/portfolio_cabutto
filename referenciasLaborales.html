@@ -54,21 +54,17 @@
     </nav>
 
     <h2 class="H2"> Referencias laborales </h2>
-    <form>
-        <div class="listaContactos">
-            <select contacto="contactos laborales">
-                <option value="1">Mike Robinson - Juez de Primera Instancia (0351) 156879087</option>
-                <option value="2">Peter Johnson - Juez de Primera Instancia (0351) 156789677</option>
-                <option value="3">Mike Robinson - Juez de Primera Instancia (0351) 156879087</option>
-                <option value="4">Peter Johnson - Juez de Primera Instancia (0351) 156789677</option>
-                <option value="5">Mike Robinson - Juez de Primera Instancia (0351) 156879087</option>
-                <option value="6">Peter Johnson - Juez de Primera Instancia (0351) 156789677</option>
-                <option value="7">Mike Robinson - Juez de Primera Instancia (0351) 156879087</option>
-                <option value="8">Peter Johnson - Juez de Primera Instancia (0351) 156789677</option>
-            </select>
-        </div>
 
-    </form>
+    <div class="dropdown listaContactos">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Contactos Laborales
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item">Mike Robinson - Juez de Primera Instancia (0351) 15687908</a></li>
+          <li><a class="dropdown-item">Peter Johnson - Juez de Primera Instancia (0351) 156789677</a></li>
+          <li><a class="dropdown-item">Peter Johnson - Juez de Primera Instancia (0351) 156789677</a></li>
+        </ul>
+    </div>
 
     <ul class="listaContactosActuales">
         <li class="list-group-item disabled" aria-disabled="true"> Contactos laborales del trabajo actual:</li>

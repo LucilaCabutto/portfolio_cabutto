@@ -185,9 +185,10 @@ sass --watch scss/style.scss css/style.css
 }
 .fondoWeb .listaContactos {
   color: #051367;
-  text-align: center;
-  line-height: 8;
-  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
 }
 .fondoWeb .listaContactosActuales {
   color: #051367;
@@ -208,7 +209,7 @@ sass --watch scss/style.scss css/style.css
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 350px) {
   .fondoWeb .enlacesdeNavegacion {
     display: flex;
     justify-content: space-evenly;
